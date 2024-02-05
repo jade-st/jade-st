@@ -1,0 +1,85 @@
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+  <ul
+    class="-mb-px flex flex-wrap text-center text-sm font-medium text-gray-500 dark:text-gray-400"
+    id="tabButtons"
+    role="tablist"
+  >
+    <li class="mr-2" role="presentation">
+      <button
+        class="inline-block rounded-t-lg border-b-2 border-transparent p-3 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
+        id="professional-tab"
+        type="button"
+        role="tab"
+        aria-controls="professional"
+        aria-selected="false">Professional</button
+      >
+    </li>
+    <li class="mr-2" role="presentation">
+      <button
+        class="inline-block rounded-t-lg border-b-2 border-transparent p-3 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
+        id="personal-tab"
+        type="button"
+        role="tab"
+        aria-controls="personal"
+        aria-selected="false">Personal</button
+      >
+    </li>
+  </ul>
+</div>
+<div>
+  <div
+    class="hidden rounded-lg p-4 dark:bg-gray-800"
+    id="professional"
+    role="tabpanel"
+    aria-labelledby="professional-tab"
+  >
+    <ul class="text-sm text-gray-500" data-testid="professional-tab-content">
+      <p>👋 Well-versed across functional, and non-functional testing.</p>
+      <p>🚀 Experience working within Agile and Waterfall methodologies.</p>
+      <p>⚙️ Playwright, CypressIO, Cucumber, WebdriverIO & Supertest.</p>
+      <p>🗣️ JavaScript/Node</p>
+    </ul>
+  </div>
+</div>
+<div
+  class="hidden rounded-lg p-4 dark:bg-gray-800"
+  id="personal"
+  role="tabpanel"
+  aria-labelledby="personal-tab"
+>
+  <ul class="text-sm text-gray-500" data-testid="personal-tab-content">
+    <p>📍 Based in Edinburgh.</p>
+    <p>🌭 Owner of a long dog.</p>
+    <p>🎮 I game in my spare time.</p>
+    <p>🍰 Bit of a foodie.</p>
+  </ul>
+</div>
+
+<script>
+  import { Tabs } from "flowbite";
+  import type { TabsInterface, TabItem } from "flowbite";
+
+  const tabElements: TabItem[] = [
+    {
+      id: "professional",
+      triggerEl: document.querySelector("#professional-tab"),
+      targetEl: document.querySelector("#professional"),
+    },
+    {
+      id: "personal",
+      triggerEl: document.querySelector("#personal-tab"),
+      targetEl: document.querySelector("#personal"),
+    },
+  ];
+
+  const options = {
+    defaultTabId: "professional",
+    activeClasses:
+      "text-pink-600 hover:text-pink-600 dark:text-pink-500 dark:hover:text-pink-400 border-pink-600 dark:border-pink-500",
+    inactiveClasses:
+      "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
+  };
+
+  const tabs: TabsInterface = new Tabs(tabElements, options);
+  tabs.show("professional");
+</script>

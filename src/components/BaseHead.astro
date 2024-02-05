@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import consts from "../data/consts.json";
+
+export interface Props {
+  title: string;
+  image?: string;
+}
+
+const { title = "/j-icon.png" } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/j-icon.png" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={consts.title} />

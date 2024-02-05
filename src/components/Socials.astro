@@ -1,0 +1,31 @@
+---
+import consts from "../data/consts.json";
+---
+
+<socials class="bg-white">
+  <div class="mx-auto max-w-7xl overflow-hidden py-1 px-5 sm:py-1 lg:px-1">
+    <div class="mt-5 flex justify-center space-x-10">
+      {
+        consts.socials.map((links) => (
+          <a
+            href={links.url}
+            class="text-pink-600 hover:text-gray-600"
+            target="_blank"
+            data-testid={links.url}
+          >
+            <span class="sr-only">{links.platform}</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              data-testid={links.platform}
+            >
+              <path fill-rule="evenodd" d={links.icon} clip-rule="evenodd" />
+            </svg>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</socials>

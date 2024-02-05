@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Tabs from "../components/Tabs.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout />
+<main
+  class="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8"
+>
+  <div class="mx-auto max-w-7xl place-items-center px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="sm:flex">
+        <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4">
+          <img
+            class="inline=block h-55 w-55 rounded-md"
+            src="/jade.png"
+            alt="Image of Jade"
+          />
+        </div>
+        <div class="px-2 pb-2">
+          <Header />
+          <p class="mt-5 max-w-4xl text-sm text-gray-500">
+            I'm passionate about delivering high-quality, accessible
+            applications through a combination of manual and automated testing.
+            (You can't have one without the other!)
+          </p>
+          <p class="mt-7 max-w-4xl text-sm text-gray-500">
+            In addition to all things testing, I enjoy coaching engineering
+            teams about agile best practices and encouraging a positive team
+            culture.
+          </p>
+        </div>
+      </div>
+      <Tabs />
+    </div>
+    <Footer />
+  </div>
+</main>
