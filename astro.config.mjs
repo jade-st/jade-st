@@ -5,6 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jade-st.github.io",
+  site: "https://jades.work/",
   integrations: [tailwind()],
 });
