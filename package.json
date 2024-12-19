@@ -15,7 +15,7 @@
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^5.1.2",
-    "astro": "^4.16.12",
+    "astro": "^4.16.18",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
     "flowbite": "^1.6.3",
