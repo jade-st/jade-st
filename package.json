@@ -18,7 +18,7 @@
     "astro": "^4.16.18",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
-    "flowbite": "^1.6.3",
+    "flowbite": "^3.1.2",
     "postcss": "^8.4.31",
     "prettier": "^2.8.3",
     "prettier-plugin-astro": "^0.8.0",
